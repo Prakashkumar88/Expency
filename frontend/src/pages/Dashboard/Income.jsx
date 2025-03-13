@@ -128,7 +128,7 @@ const Income = () => {
           </div>
           <IncomeList
             transactions={incomeData}
-            onClose={(id) => {
+            onDelete={(id) => {
               setOpenDeleteAlert({ show: true, data: id });
             }}
             onDownload={handleDownloadIncomeDetails}
