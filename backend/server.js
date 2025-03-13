@@ -21,13 +21,16 @@ app.use(
 app.use(express.json());
 //comment
 connectDB();
-app.use("/api/v1/auth",authRoutes);
+app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/income", incomeRoutes);
 app.use("/api/v1/expense", expenseRoutes);
 app.use("/api/v1/dashboard", dashboardRoutes);
 
 //Serve upload folder
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+const _dirname = path.resolve();
+app.use(express.static(path.join(_dirname, "/frontend/dist")));
+app.get('*', (req, res) => { res.sendFile(path.resolve(_dirname, "frontend", "dist", "index.html")) });
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, ()=>console.log(`server running on port ${PORT}`));
+app.listen(PORT, () => console.log(`server running on port ${PORT}`));
