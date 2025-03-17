@@ -74,7 +74,7 @@ const SignUp = () => {
         </p>
         <form onSubmit={handleSignUp}>
           <ProfilePhotoSelector image={profilePic} setImage={setProfilePic} />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4">
             <Input
               value={fullName}
               onChange={({ target }) => setFullName(target.value)}
