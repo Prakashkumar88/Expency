@@ -54,7 +54,7 @@ Expency is a comprehensive expense tracking application that helps users manage 
 - Express.js
 - MongoDB with Mongoose
 - JWT for authentication
-- Multer & Cloudinary for image uploads
+- Multer for image uploads
 
 ---
 
@@ -78,7 +78,7 @@ npm install
 ```
 
 #### Environment Variables
-Create a `.env` file in the `backend` directory and add:
+Create a `.env` file in the main directory and add:
 ```
 MONGO_URI = 
 JWT_SECRET = 
@@ -98,10 +98,6 @@ cd frontend
 npm install
 ```
 
-#### Start Frontend Server
-```sh
-npm start
-```
 
 ### Running the App
 Once both servers are running, open [http://localhost:8000](http://localhost:8000) in your browser.
